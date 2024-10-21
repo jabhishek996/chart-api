@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 20px;
+}
+#data {
+    font-size: 24px;
+    margin-top: 20px;
+}
+canvas {
+    background-color: white;
+    display: flex;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 20px;    
+}
+#downloadPDF{
+background-color: green;
+padding: 10px 20px;
+border: none;
+color: aliceblue;
+}
+#downloadPDF:hover{  background-color: rgb(35, 189, 35);}
+
+#downloadjpg{
+background-color: rgb(66, 63, 240);
+padding: 10px 20px;
+border: none;
+color: aliceblue;
+}
+#downloadjpg:hover{  background-color: rgb(94, 92, 238);}

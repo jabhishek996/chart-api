@@ -38,18 +38,13 @@ const myChart = new Chart(ctx, {
 
 // Function to fetch data and update the chart
 function fetchData() {
-fetch('http://localhost:8000/get-data')
-.then(response => response.json())
-.then(data => {
-    // Update chart data with the new random values
-    myChart.data.datasets[0].data = data.v; // Use the random values for Sales
-    myChart.data.datasets[1].data = data.v.map(value => Math.floor(value * 0.5)); // Example for Profit
-    myChart.data.datasets[2].data = data.v.map(value => Math.floor(value * 2)); // Example for Turnover
-    // Update the chart
+    const randomData = Array(4).fill(0).map(() => Math.floor(Math.random() * 100));
+    myChart.data.datasets[0].data = randomData; // Random values for Sales
+    myChart.data.datasets[1].data = randomData.map(value => Math.floor(value * 0.5)); // Example for Profit
+    myChart.data.datasets[2].data = randomData.map(value => Math.floor(value * 2)); // Example for Turnover
     myChart.update();
-})
-.catch(error => console.error('Error fetching data:', error));
 }
+
 // Function to format the current date and time
 function getFormattedDateTime() {
 const now = new Date();
